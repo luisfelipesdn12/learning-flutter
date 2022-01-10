@@ -46,80 +46,48 @@ class MyApp extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 40.0,
-                ),
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50.0),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey[400],
-                        offset: Offset(0.0, 1.0),
-                        blurRadius: 3.0,
-                      ),
-                    ],
+                  width: 200.0,
+                  child: Divider(
+                    color: Colors.grey[400],
                   ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        Icons.email,
-                        color: Colors.grey[850],
-                        size: 25.0,
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(horizontal: 30.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.grey[850],
+                      size: 25.0,
+                    ),
+                    title: Text(
+                      "luisfelipesdn12@gmail.com",
+                      style: TextStyle(
+                        fontFamily: "Asap",
+                        fontSize: 20.0,
+                        color: Colors.grey[600],
                       ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        "luisfelipesdn12@gmail.com",
-                        style: TextStyle(
-                          fontFamily: "Asap",
-                          fontSize: 20.0,
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 15.0, horizontal: 40.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50.0),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey[400],
-                        offset: Offset(0.0, 1.0),
-                        blurRadius: 3.0,
+                Card(
+                  margin: EdgeInsets.symmetric(horizontal: 30.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.link,
+                      color: Colors.grey[850],
+                      size: 25.0,
+                    ),
+                    title: Text(
+                      "luisfelipesdn12.now.sh",
+                      style: TextStyle(
+                        fontFamily: "Asap",
+                        fontSize: 20.0,
+                        color: Colors.grey[600],
                       ),
-                    ],
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        Icons.link,
-                        color: Colors.grey[850],
-                        size: 25.0,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        "luisfelipesdn12.now.sh",
-                        style: TextStyle(
-                          fontFamily: "Asap",
-                          fontSize: 20.0,
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
               ],
