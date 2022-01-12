@@ -40,7 +40,7 @@ A card with information about me.
 
 An app that genarates random numbers by clicking on dices.
 
-Based on the 6th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
+Based on the 7th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
 
 https://user-images.githubusercontent.com/60361387/149048574-28f19c16-25df-48ef-8160-56a697c839fe.mp4
 
