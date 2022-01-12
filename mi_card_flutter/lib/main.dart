@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mi_card/infoCard.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,44 +52,16 @@ class MyApp extends StatelessWidget {
                     color: Colors.grey[400],
                   ),
                 ),
-                Card(
-                  margin: EdgeInsets.symmetric(horizontal: 25.0),
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.email,
-                      color: Colors.grey[850],
-                      size: 25.0,
-                    ),
-                    title: Text(
-                      "luisfelipesdn12@gmail.com",
-                      style: TextStyle(
-                        fontFamily: "Asap",
-                        fontSize: 20.0,
-                        color: Colors.grey[600],
-                      ),
-                    ),
-                  ),
+                InfoCard(
+                  icon: Icons.email,
+                  text: "luisfelipesdn12@gmail.com",
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
-                Card(
-                  margin: EdgeInsets.symmetric(horizontal: 25.0),
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.link,
-                      color: Colors.grey[850],
-                      size: 25.0,
-                    ),
-                    title: Text(
-                      "luisfelipesdn12.now.sh",
-                      style: TextStyle(
-                        fontFamily: "Asap",
-                        fontSize: 20.0,
-                        color: Colors.grey[600],
-                      ),
-                    ),
-                  ),
+                InfoCard(
+                  icon: Icons.link,
+                  text: "luisfelipesdn12.now.sh",
                 ),
               ],
             ),
