@@ -1,4 +1,4 @@
-# [mi_card_flutter](./mi_card_flutter)
+# mi_card_flutter
 
 A card with information about me.
 

@@ -14,13 +14,13 @@ To know how to use multiple floating action buttons, I've used [this StackOverfl
 
 ## [i_am_rich](./i_am_rich)
 
-Based on the 3-4 sections of the course (https://www.udemy.com/course/flutter-bootcamp-with-dart).
+Based on the 3-4 sections of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
 
 ![demo](https://i.ibb.co/k8QQmGC/image.png)
 
 ## [i_am_poor](./i_am_poor)
 
-Based on the 5th section of the course (https://www.udemy.com/course/flutter-bootcamp-with-dart).
+Based on the 5th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
 
 Free to use what was learned.
 
@@ -35,3 +35,18 @@ Based in the mockup:
 A card with information about me.
 
 ![mi-card-demo](https://user-images.githubusercontent.com/60361387/148853173-c476b77e-8e64-4e8f-8864-8cd5231fa96f.png)
+
+## [dicee-flutter](./dicee-flutter)
+
+An app that genarates random numbers by clicking on dices.
+
+Based on the 6th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
+
+https://user-images.githubusercontent.com/60361387/149048574-28f19c16-25df-48ef-8160-56a697c839fe.mp4
+
+I've made some improvements to the original app, and the main things I've used are:
+
+- Create a custom widget for the dices.
+- Use the `Random` class to generate random numbers.
+- Replace the deprecated `FlatButton` widget with `TextButton`.
+- Learn how to use the `Expanded` widget.
