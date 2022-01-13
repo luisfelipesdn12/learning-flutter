@@ -1,5 +1,12 @@
 # learning-flutter
 
+- [clickometro](#clickometro)
+- [i_am_rich](#i_am_rich)
+- [i_am_poor](#i_am_poor)
+- [mi_card_flutter](#mi_card_flutter)
+- [dicee-flutter](#dicee-flutter)
+- [magic-8-ball-flutter](#magic-8-ball-flutter)
+
 ## [clickometro](./clickometro)
 
 Clickômetro. A click counter.
@@ -50,3 +57,13 @@ I've made some improvements to the original app, and the main things I've used a
 - Use the `Random` class to generate random numbers.
 - Replace the deprecated `FlatButton` widget with `TextButton`.
 - Learn how to use the `Expanded` widget.
+
+## [magic-8-ball-flutter](./magic-8-ball-flutter)
+
+An app that answers your questions randomly.
+
+Boss-level challenge on the 8th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
+
+https://user-images.githubusercontent.com/60361387/149256982-c896d9ad-148a-4e66-854a-23fc648d8a51.mp4
+
+I've created an external util function that generates a natural and non-repeted random number between.
