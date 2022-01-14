@@ -6,6 +6,7 @@
 - [mi_card_flutter](#mi_card_flutter)
 - [dicee-flutter](#dicee-flutter)
 - [magic-8-ball-flutter](#magic-8-ball-flutter)
+- [xylophone-flutter](#xylophone-flutter)
 
 ## [clickometro](./clickometro)
 
@@ -63,3 +64,15 @@ Boss-level challenge on the 8th section of the [course](https://www.udemy.com/co
 https://user-images.githubusercontent.com/60361387/149256982-c896d9ad-148a-4e66-854a-23fc648d8a51.mp4
 
 I've created an external util function that generates a natural and non-repeted random number between.
+
+## [xylophone-flutter](./xylophone-flutter)
+
+An app that plays the notas as a xylophone.
+
+Based on the 8th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
+
+https://user-images.githubusercontent.com/60361387/149438065-5de32573-ead2-4ab3-95d8-05cabbe2d79a.mp4
+
+I've done some improvements:
+- Use a different library to play the sounds.
+- Use map through a list of colors to get the sounds.
