@@ -37,7 +37,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                'This is where the question text will go.',
+                'I don\'t wanna give you up.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -50,11 +50,9 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              textColor: Colors.white,
-              color: Colors.green,
+            child: TextButton(
               child: Text(
-                'True',
+                'Verdadeiro',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,
@@ -63,16 +61,18 @@ class _QuizPageState extends State<QuizPage> {
               onPressed: () {
                 //The user picked true.
               },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),
+              ),
             ),
           ),
         ),
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              color: Colors.red,
+            child: TextButton(
               child: Text(
-                'False',
+                'Falso',
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Colors.white,
@@ -81,10 +81,13 @@ class _QuizPageState extends State<QuizPage> {
               onPressed: () {
                 //The user picked false.
               },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.red),
+              ),
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        // TODO: Add a Row here as your score keeper
       ],
     );
   }
