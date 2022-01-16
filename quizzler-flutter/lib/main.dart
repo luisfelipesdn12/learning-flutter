@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quizzler/models/question.dart';
+import 'package:quizzler/questionsKeeper.dart';
 
 void main() => runApp(Quizzler());
 
@@ -25,6 +27,21 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+  List<bool> score = [];
+
+  QuestionsKeeper questionsKeeper = new QuestionsKeeper([
+    Question('We\'re no strangers to love', true),
+    Question('You know the rules and so do I', false),
+    Question('I just want to tell you how I\'m feeling', true),
+    Question('Gotta make you understand', false),
+    Question('Never gonna give you up', false),
+    Question('Never gonna let you down', false),
+    Question('Never gonna run around and desert you', false),
+    Question('Never gonna make you cry', false),
+    Question('Never gonna say goodbye', false),
+    Question('Never gonna tell a lie and hurt you', true),
+  ]);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +54,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                'I don\'t wanna give you up.',
+                questionsKeeper.currentQuestion.text,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -58,9 +75,10 @@ class _QuizPageState extends State<QuizPage> {
                   fontSize: 20.0,
                 ),
               ),
-              onPressed: () {
-                //The user picked true.
-              },
+              onPressed: () => setState(() {
+                score.add(questionsKeeper.currentQuestion.answer == true);
+                questionsKeeper.next();
+              }),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.green),
               ),
@@ -78,16 +96,26 @@ class _QuizPageState extends State<QuizPage> {
                   color: Colors.white,
                 ),
               ),
-              onPressed: () {
-                //The user picked false.
-              },
+              onPressed: () => setState(() {
+                score.add(questionsKeeper.currentQuestion.answer == false);
+                questionsKeeper.next();
+              }),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.red),
               ),
             ),
           ),
         ),
-        // TODO: Add a Row here as your score keeper
+        Row(
+          children: score
+              .map(
+                (isCorrect) => Icon(
+                  isCorrect ? Icons.check : Icons.close,
+                  color: isCorrect ? Colors.green : Colors.red,
+                ),
+              )
+              .toList(),
+        ),
       ],
     );
   }
