@@ -1,15 +1,12 @@
-![App Brewery Banner](https://github.com/londonappbrewery/Images/blob/master/AppBreweryBanner.png)
+# destini-challenge
 
+An choose-your-own-adventure game. With multiple endings.
 
-# Destini 🤔
+Boss lever challenge from the 11th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
 
-## Our Goal
+https://user-images.githubusercontent.com/60361387/150018770-1b2ee52d-45a4-4df2-90e0-8a58d8530966.mp4
 
-In this challenge, you will be building a choose your own adventure game like Bandersnatch. In the process, you should apply your knowledge from the last module (Quizzler) to use Dart OOP principles to build a well organised project.
-
-![Finished App](https://github.com/londonappbrewery/Images/blob/master/Destini.gif)
-
-
->This is a companion project to The App Brewery's Complete Flutter Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
-
-![End Banner](https://github.com/londonappbrewery/Images/blob/master/readme-end-banner.png)
+Improvements:
+- Create `Button` and `StoryDisplayer` widgets.
+- Use a different background color for the story.
+- Replace deprecated `FlatButton` widget with `TextButton`.

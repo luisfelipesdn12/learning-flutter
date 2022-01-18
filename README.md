@@ -8,6 +8,7 @@
 - [magic-8-ball-flutter](#magic-8-ball-flutter)
 - [xylophone-flutter](#xylophone-flutter)
 - [quizzler-flutter](#quizzler-flutter)
+- [destini-challenge](#destini-challenge)
 
 ## [clickometro](./clickometro)
 
@@ -70,7 +71,7 @@ I've created an external util function that generates a natural and non-repeted 
 
 An app that plays the notas as a xylophone.
 
-Based on the 8th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
+Based on the 9th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
 
 https://user-images.githubusercontent.com/60361387/149438065-5de32573-ead2-4ab3-95d8-05cabbe2d79a.mp4
 
@@ -82,10 +83,24 @@ I've done some improvements:
 
 A quiz app with True/False questions.
 
-Based on the 9th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
+Based on the 10th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
 
 https://user-images.githubusercontent.com/60361387/149999672-d6f3893e-7ed3-421e-a253-d283a71ea04a.mp4
 
 Improvements and differences:
 - Use getters from Dart in the `Question` class.
 - Create a `QuestionKeeper` class to iterate over the questions.
+
+## [destini-challenge](./destini-challenge)
+
+An choose-your-own-adventure game. With multiple endings.
+
+Boss lever challenge from the 11th section of the [course](https://www.udemy.com/course/flutter-bootcamp-with-dart).
+
+https://user-images.githubusercontent.com/60361387/150018770-1b2ee52d-45a4-4df2-90e0-8a58d8530966.mp4
+
+Improvements:
+- Create `Button` and `StoryDisplayer` widgets.
+- Use a different background color for the story.
+- Replace deprecated `FlatButton` widget with `TextButton`.
+
