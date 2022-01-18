@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:destini_challenge_starting/components/button.dart';
+import 'package:destini_challenge_starting/components/storyDisplayer.dart';
 import 'package:destini_challenge_starting/story_brain.dart';
 import 'package:flutter/material.dart';
 
@@ -43,42 +45,16 @@ class _StoryPageState extends State<StoryPage> {
                 Expanded(
                   flex: 12,
                   child: Center(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.25),
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                      ),
-                      padding: EdgeInsets.all(25.0),
-                      child: Text(
-                        storyBrain.story,
-                        style: TextStyle(
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                    child: StotyDisplayer(story: storyBrain.story),
                   ),
                 ),
                 Expanded(
                   flex: 2,
-                  child: TextButton(
+                  child: Button(
+                    text: storyBrain.choice1,
                     onPressed: () => setState(() {
                       storyBrain.nextStory(1);
                     }),
-                    child: Text(
-                      storyBrain.choice1,
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                        Colors.pink[500],
-                      ),
-                    ),
                   ),
                 ),
                 SizedBox(
@@ -86,25 +62,13 @@ class _StoryPageState extends State<StoryPage> {
                 ),
                 Expanded(
                   flex: 2,
-                  child: Visibility(
+                  child: Button(
+                    text: storyBrain.choice2,
+                    type: ButtonType.secondary,
                     visible: !storyBrain.isFinithed,
-                    child: TextButton(
-                      onPressed: () => setState(() {
-                        storyBrain.nextStory(2);
-                      }),
-                      child: Text(
-                        storyBrain.choice2,
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.blue[700]),
-                      ),
-                    ),
+                    onPressed: () => setState(() {
+                      storyBrain.nextStory(2);
+                    }),
                   ),
                 ),
               ],
