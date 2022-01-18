@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quizzler/models/question.dart';
 import 'package:quizzler/questionsKeeper.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 void main() => runApp(Quizzler());
 
@@ -33,6 +33,19 @@ class _QuizPageState extends State<QuizPage> {
 
   @override
   Widget build(BuildContext context) {
+    if (questionsKeeper.currentQuestion == null) {
+      Alert(
+          context: context,
+          title: "Ebaaa",
+          desc: "Você terminou o quiz!",
+          buttons: []).show();
+
+      setState(() {
+        questionsKeeper.reset();
+        score = [];
+      });
+    }
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
