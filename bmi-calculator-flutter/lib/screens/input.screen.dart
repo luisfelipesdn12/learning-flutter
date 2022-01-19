@@ -1,4 +1,7 @@
+import 'package:bmi_calculator/widgets/iconAndCaptionContent.dart';
+import 'package:bmi_calculator/widgets/pageContainer.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -13,58 +16,47 @@ class _InputPageState extends State<InputPage> {
       appBar: AppBar(
         title: Text('CALCULADORA DE IMC'),
       ),
-      body: Container(
-        padding: EdgeInsets.all(10.0),
-        child: Column(
-          children: [
-            Expanded(
-              child: Row(
-                children: [
-                  PageContainer(color: Colors.pink),
-                  PageContainer(color: Colors.blue),
-                ],
-              ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                PageContainer(
+                  child: IconAndCaptionContent(
+                    icon: FontAwesomeIcons.mars,
+                    caption: 'Masculino',
+                  ),
+                ),
+                PageContainer(
+                  child: IconAndCaptionContent(
+                    icon: FontAwesomeIcons.venus,
+                    caption: 'Feminino',
+                  ),
+                ),
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  PageContainer(color: Colors.purple),
-                ],
-              ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                PageContainer(),
+              ],
             ),
-            Expanded(
-              child: Row(
-                children: [
-                  PageContainer(color: Colors.green),
-                  PageContainer(color: Colors.yellow),
-                ],
-              ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                PageContainer(),
+                PageContainer(),
+              ],
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class PageContainer extends StatelessWidget {
-  const PageContainer({
-    Key key,
-    this.color,
-  }) : super(key: key);
-
-  final Color color;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        margin: EdgeInsets.all(10),
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: color != null ? color : Colors.grey.withOpacity(0.25),
-          borderRadius: BorderRadius.circular(10),
-        ),
+          ),
+          Container(
+            padding: EdgeInsets.all(15.0),
+            color: Theme.of(context).colorScheme.secondary,
+            height: 50.0,
+          ),
+        ],
       ),
     );
   }

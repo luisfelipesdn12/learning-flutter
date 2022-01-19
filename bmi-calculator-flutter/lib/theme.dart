@@ -6,6 +6,12 @@ ThemeData theme = ThemeData(
     background: Colors.indigo[900].withOpacity(0.5),
     secondary: Colors.pinkAccent,
   ),
+  textTheme: TextTheme(
+    caption: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+    ),
+  ),
   appBarTheme: AppBarTheme(
     centerTitle: true,
   ),
