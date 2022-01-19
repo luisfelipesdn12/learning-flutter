@@ -105,7 +105,12 @@ class _InputPageState extends State<InputPage> {
           Container(
             padding: EdgeInsets.all(15.0),
             color: Theme.of(context).colorScheme.secondary,
-            height: 50.0,
+            width: double.infinity,
+            child: Text(
+              "Calcule seu IMC".toUpperCase(),
+              textAlign: TextAlign.center,
+              style: Theme.of(context).appBarTheme.titleTextStyle,
+            ),
           ),
         ],
       ),
