@@ -1,3 +1,5 @@
+import 'package:bmi_calculator/screens/results.screen.dart';
+import 'package:bmi_calculator/widgets/bottomNavigationButton.dart';
 import 'package:bmi_calculator/widgets/iconAndCaptionContent.dart';
 import 'package:bmi_calculator/widgets/increaseValueCard.dart';
 import 'package:bmi_calculator/widgets/pageCard.dart';
@@ -16,10 +18,10 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender selectedGender;
+  Gender selectedGender = Gender.masculine;
   double height = 1.5;
   double weight = 60;
-  double age = 0;
+  double age = 18;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class _InputPageState extends State<InputPage> {
       ),
       body: Column(
         children: [
+          SizedBox(height: 10),
           Expanded(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -68,7 +71,7 @@ class _InputPageState extends State<InputPage> {
                 SliderPageCard(
                   label: "Altura",
                   value: height,
-                  unit: "cm",
+                  unit: "m",
                   min: 1,
                   max: 3,
                   onChanged: (value) => setState(() {
@@ -102,15 +105,10 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            padding: EdgeInsets.all(15.0),
-            color: Theme.of(context).colorScheme.secondary,
-            width: double.infinity,
-            child: Text(
-              "Calcule seu IMC".toUpperCase(),
-              textAlign: TextAlign.center,
-              style: Theme.of(context).appBarTheme.titleTextStyle,
-            ),
+          SizedBox(height: 10),
+          BottomNavigationButton(
+            text: "Calcule seu IMC",
+            route: "/results",
           ),
         ],
       ),
