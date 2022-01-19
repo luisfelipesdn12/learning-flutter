@@ -22,12 +22,18 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 PageContainer(
+                  onTap: () {
+                    print('Sou meninoooooo, menino femininoo!');
+                  },
                   child: IconAndCaptionContent(
                     icon: FontAwesomeIcons.mars,
                     caption: 'Masculino',
                   ),
                 ),
                 PageContainer(
+                  onTap: () {
+                    print('Sou meninaaaaaa, menina masculinaa!');
+                  },
                   child: IconAndCaptionContent(
                     icon: FontAwesomeIcons.venus,
                     caption: 'Feminino',
