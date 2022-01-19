@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class PageContainer extends StatelessWidget {
-  const PageContainer({
+class PageCard extends StatelessWidget {
+  const PageCard({
     Key key,
     this.color,
     this.child,

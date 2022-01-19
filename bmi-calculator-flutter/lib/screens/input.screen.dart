@@ -1,5 +1,5 @@
 import 'package:bmi_calculator/widgets/iconAndCaptionContent.dart';
-import 'package:bmi_calculator/widgets/pageContainer.dart';
+import 'package:bmi_calculator/widgets/pageCard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,7 +21,7 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                PageContainer(
+                PageCard(
                   onTap: () {
                     print('Sou meninoooooo, menino femininoo!');
                   },
@@ -30,7 +30,7 @@ class _InputPageState extends State<InputPage> {
                     caption: 'Masculino',
                   ),
                 ),
-                PageContainer(
+                PageCard(
                   onTap: () {
                     print('Sou meninaaaaaa, menina masculinaa!');
                   },
@@ -45,15 +45,15 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                PageContainer(),
+                PageCard(),
               ],
             ),
           ),
           Expanded(
             child: Row(
               children: [
-                PageContainer(),
-                PageContainer(),
+                PageCard(),
+                PageCard(),
               ],
             ),
           ),
