@@ -3,12 +3,19 @@ import 'package:bmi_calculator/widgets/pageCard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+enum Gender {
+  feminine,
+  masculine,
+}
+
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
 }
 
 class _InputPageState extends State<InputPage> {
+  Gender selectedGender;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +29,11 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 PageCard(
+                  active: selectedGender == Gender.masculine,
                   onTap: () {
-                    print('Sou meninoooooo, menino femininoo!');
+                    setState(() {
+                      selectedGender = Gender.masculine;
+                    });
                   },
                   child: IconAndCaptionContent(
                     icon: FontAwesomeIcons.mars,
@@ -31,8 +41,11 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ),
                 PageCard(
+                  active: selectedGender == Gender.feminine,
                   onTap: () {
-                    print('Sou meninaaaaaa, menina masculinaa!');
+                    setState(() {
+                      selectedGender = Gender.feminine;
+                    });
                   },
                   child: IconAndCaptionContent(
                     icon: FontAwesomeIcons.venus,
