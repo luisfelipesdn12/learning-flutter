@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/screens/results.screen.dart';
+import 'package:bmi_calculator/BMICalculation.dart';
 import 'package:bmi_calculator/widgets/bottomNavigationButton.dart';
 import 'package:bmi_calculator/widgets/iconAndCaptionContent.dart';
 import 'package:bmi_calculator/widgets/increaseValueCard.dart';
@@ -7,21 +7,13 @@ import 'package:bmi_calculator/widgets/sliderCard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-enum Gender {
-  feminine,
-  masculine,
-}
-
 class InputPage extends StatefulWidget {
   @override
   _InputPageState createState() => _InputPageState();
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender selectedGender = Gender.masculine;
-  double height = 1.5;
-  double weight = 60;
-  double age = 18;
+  BMICalculation bmi = BMICalculation();
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +30,10 @@ class _InputPageState extends State<InputPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 PageCard(
-                  active: selectedGender == Gender.masculine,
+                  active: bmi.gender == Gender.masculine,
                   onTap: () {
                     setState(() {
-                      selectedGender = Gender.masculine;
+                      bmi.gender = Gender.masculine;
                     });
                   },
                   child: IconAndCaptionContent(
@@ -50,10 +42,10 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ),
                 PageCard(
-                  active: selectedGender == Gender.feminine,
+                  active: bmi.gender == Gender.feminine,
                   onTap: () {
                     setState(() {
-                      selectedGender = Gender.feminine;
+                      bmi.gender = Gender.feminine;
                     });
                   },
                   child: IconAndCaptionContent(
@@ -70,12 +62,12 @@ class _InputPageState extends State<InputPage> {
               children: [
                 SliderPageCard(
                   label: "Altura",
-                  value: height,
+                  value: bmi.height,
                   unit: "m",
                   min: 1,
                   max: 3,
                   onChanged: (value) => setState(() {
-                    height = value;
+                    bmi.height = value;
                   }),
                   formatValue: (v) =>
                       v.toStringAsFixed(2).replaceFirst('.', ','),
@@ -90,16 +82,16 @@ class _InputPageState extends State<InputPage> {
                 IncreaseValueCard(
                   label: "Peso",
                   unit: "kg",
-                  value: weight,
+                  value: bmi.weight,
                   onChanged: (value) => setState(() {
-                    weight = value;
+                    bmi.weight = value;
                   }),
                 ),
                 IncreaseValueCard(
                   label: "Idade",
-                  value: age,
+                  value: bmi.age,
                   onChanged: (value) => setState(() {
-                    age = value;
+                    bmi.age = value;
                   }),
                 ),
               ],
