@@ -11,7 +11,7 @@ class _InputPageState extends State<InputPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('CALCULADORA DE IMC'),
       ),
       body: Container(
         padding: EdgeInsets.all(10.0),
@@ -20,23 +20,23 @@ class _InputPageState extends State<InputPage> {
             Expanded(
               child: Row(
                 children: [
-                  PageContainer(),
-                  PageContainer(),
+                  PageContainer(color: Colors.pink),
+                  PageContainer(color: Colors.blue),
                 ],
               ),
             ),
             Expanded(
               child: Row(
                 children: [
-                  PageContainer(),
+                  PageContainer(color: Colors.purple),
                 ],
               ),
             ),
             Expanded(
               child: Row(
                 children: [
-                  PageContainer(),
-                  PageContainer(),
+                  PageContainer(color: Colors.green),
+                  PageContainer(color: Colors.yellow),
                 ],
               ),
             ),
@@ -50,7 +50,10 @@ class _InputPageState extends State<InputPage> {
 class PageContainer extends StatelessWidget {
   const PageContainer({
     Key key,
+    this.color,
   }) : super(key: key);
+
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +62,7 @@ class PageContainer extends StatelessWidget {
         margin: EdgeInsets.all(10),
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: Colors.grey.withOpacity(0.5),
+          color: color != null ? color : Colors.grey.withOpacity(0.25),
           borderRadius: BorderRadius.circular(10),
         ),
       ),
