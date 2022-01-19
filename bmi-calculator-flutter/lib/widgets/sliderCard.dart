@@ -5,11 +5,11 @@ class SliderPageCard extends StatelessWidget {
   SliderPageCard({
     this.label,
     this.unit,
+    this.formatValue,
     @required this.min,
     @required this.max,
     @required this.value,
     @required this.onChanged,
-    @required this.formatValue,
   });
 
   final String label;

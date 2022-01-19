@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/widgets/iconAndCaptionContent.dart';
+import 'package:bmi_calculator/widgets/increaseValueCard.dart';
 import 'package:bmi_calculator/widgets/pageCard.dart';
 import 'package:bmi_calculator/widgets/sliderCard.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,8 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   double height = 1.5;
+  double weight = 60;
+  double age = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -81,8 +84,21 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                PageCard(),
-                PageCard(),
+                IncreaseValueCard(
+                  label: "Peso",
+                  unit: "kg",
+                  value: weight,
+                  onChanged: (value) => setState(() {
+                    weight = value;
+                  }),
+                ),
+                IncreaseValueCard(
+                  label: "Idade",
+                  value: age,
+                  onChanged: (value) => setState(() {
+                    age = value;
+                  }),
+                ),
               ],
             ),
           ),

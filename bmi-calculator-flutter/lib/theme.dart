@@ -17,11 +17,11 @@ ThemeData theme = ThemeData(
   ),
   sliderTheme: SliderThemeData(
     thumbColor: Colors.pinkAccent,
-    overlayColor: Colors.pinkAccent.withOpacity(0.5),
+    overlayColor: Colors.pinkAccent.withOpacity(0.2),
     activeTrackColor: Colors.pink,
     inactiveTrackColor: Colors.pink[200].withOpacity(0.5),
     thumbShape: RoundSliderThumbShape(
-      enabledThumbRadius: 10,
+      enabledThumbRadius: 15,
     ),
   ),
 );
