@@ -1,5 +1,6 @@
 import 'package:bmi_calculator/widgets/iconAndCaptionContent.dart';
 import 'package:bmi_calculator/widgets/pageCard.dart';
+import 'package:bmi_calculator/widgets/sliderCard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -15,6 +16,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender selectedGender;
+  double height = 1.5;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class _InputPageState extends State<InputPage> {
         children: [
           Expanded(
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 PageCard(
                   active: selectedGender == Gender.masculine,
@@ -57,13 +60,26 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                PageCard(),
+                SliderPageCard(
+                  label: "Altura",
+                  value: height,
+                  unit: "cm",
+                  min: 1,
+                  max: 3,
+                  onChanged: (value) => setState(() {
+                    height = value;
+                  }),
+                  formatValue: (v) =>
+                      v.toStringAsFixed(2).replaceFirst('.', ','),
+                )
               ],
             ),
           ),
           Expanded(
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 PageCard(),
                 PageCard(),

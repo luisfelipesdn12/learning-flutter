@@ -15,4 +15,13 @@ ThemeData theme = ThemeData(
   appBarTheme: AppBarTheme(
     centerTitle: true,
   ),
+  sliderTheme: SliderThemeData(
+    thumbColor: Colors.pinkAccent,
+    overlayColor: Colors.pinkAccent.withOpacity(0.5),
+    activeTrackColor: Colors.pink,
+    inactiveTrackColor: Colors.pink[200].withOpacity(0.5),
+    thumbShape: RoundSliderThumbShape(
+      enabledThumbRadius: 10,
+    ),
+  ),
 );
